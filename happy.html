@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Akka</title>
+    <link rel="icon" href="img.png">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family:Arial;
+            background:#ffdee9;
+            background:linear-gradient(#ffdee9, #b5fffc);
+            text-align:center;
+        }
+
+        .screen{
+            display:none;
+            height:100vh;
+            padding:20px;
+        }
+
+        .active{
+            display:block;
+        }
+
+        .button{
+            padding:15px 30px;
+            font-size:22px;
+            border:none;
+            border-radius:10px;
+            background:#ff4081;
+            color:white;
+            margin-top:40px;
+        }
+
+        .gift-box{
+            width:200px;
+            height:200px;
+            background:#ffb300;
+            margin:40px auto;
+            border-radius:10px;
+            position:relative;
+            animation:pop 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes pop{
+            from{transform:scale(1);}
+            to{transform:scale(1.05);}
+        }
+
+        .gift-lid{
+            width:220px;
+            height:40px;
+            background:#ff7043;
+            position:absolute;
+            top:-40px;
+            left:-10px;
+            border-radius:5px;
+        }
+
+        img{
+            width:180px;
+            border-radius:10px;
+            margin-top:10px;
+        }
+
+        .name-button{
+            font-size:28px;
+            margin-top:20px;
+            background:none;
+            border:none;
+            color:#d81b60;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+<!-- SCREEN 1 -->
+<div id="screen1" class="screen active">
+    <h1>🎉 Happy Birthday Akka 🎉</h1><br>
+    <p>
+        <h2>
+            🎉 "You’re a blessing today and every day."<br><br>
+            💖 "Wishing you joy, success, and endless smiles."<br><br>
+            🌸 "Stay kind, strong, and unstoppable."<br><br>
+            🎂 "To the queen of today."<br><br>
+            🌟 "Cheers to another year of greatnes."<br><br>
+            💫 "May all your dreams come true."<br><br>
+            🦋 "Keep glowing, keep growing."<br>
+
+        </h2>
+    </p> 
+    <button class="button" onclick="nextScreen(2)">Start</button>
+</div>
+
+<!-- SCREEN 2 -->
+<div id="screen2" class="screen"><br>
+    <h2>💗 Dear Akka 💗</h2><br>
+        <p style="font-size:20px; margin-top:20px;"><br><br>
+        <h3>On your special day, I wish you endless happiness,<br><br>
+        strong health, and success in everything you do.<br><br>
+        You are always my inspiration and support.<br><br>
+        Happy Birthday Akka! 💝
+        </h3>
+    </p>
+    <button class="button" onclick="nextScreen(3)">Next</button>
+</div>
+
+<!-- SCREEN 3 -->
+<div id="screen3" class="screen">
+    <h2>Your Surprise Gift 🎁</h2>
+
+    <div class="gift-car">
+        <div class="gift-car"></div>
+    </div>
+
+    <!-- your akka photo -->
+    <img src="akka.jpg" alt="Akka Photo">
+
+    <!-- name to click -->
+     <br>
+    <button class="name-button" onclick="playVideo()">✨ Akka ✨</button>
+</div>
+
+<script>
+function nextScreen(num){
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('screen' + num).classList.add('active');
+}
+
+function playVideo(){
+    // Replace "your-video.mp4" with your video file
+    window.location.href = "anisha akka.mp4";
+}
+</script>
+
+</body>
+</html>
